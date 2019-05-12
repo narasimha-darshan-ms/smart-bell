@@ -9,24 +9,24 @@ with open('ODB.txt') as csvfile:
     #print(line)
     if line:
         output = {
-        'GPS_Time' : line[0],
-        'Device_Time' : line[1],
-        'Longitude' : line[2],
-        'Latitude' : line[3],
-        'GPS_Speed' : line[4],
-        'Horizontal_Dilution_of_Precision' : line[5],
-        'Altitude' : line[6],
-        'Bearing' : line[7],
-        'Gx' : line[8],
-        'Gy' : line[9],
-        'Gz' : line[10],
-        'G_calibrated' : line[11],
-        'Engine_Coolant_Temp' : line[12],
-        'Engine_RPM' : line[13],
-        'Intake_Air_Temp' : line[14],
-        'Engine_Load' : line[15],
-        'Mass_Air_Flow_Rate' : line[16],
-        'Throttle_Pos': line[17]
+        "GPS_Time" : line[0],
+        "Device_Time" : line[1],
+        "Longitude" : float(line[2]),
+        "Latitude" : float(line[3]),
+        "GPS_Speed" : float(line[4]),
+        "Horizontal_Dilution_of_Precision" : float(line[5]),
+        "Altitude" : int(line[6]),
+        "Bearing" : float(line[7]),
+        "Gx" : float(line[8]),
+        "Gy" : float(line[9]),
+        "Gz" : float(line[10]),
+        "G_calibrated" : float(line[11]),
+        "Engine_Coolant_Temp" : int(line[12]),
+        "Engine_RPM" : float(line[13]),
+        "Intake_Air_Temp" : int(line[14]),
+        "Engine_Load" : float(line[15]),
+        "Mass_Air_Flow_Rate" : float(line[16]),
+        "Throttle_Pos": float(line[17])
         }
         pprint.pprint(output)
 csvfile.close()
